@@ -23,13 +23,13 @@ function render(html, meta) {
     .replaceAll("{{DESC}}", meta.desc)
     .replaceAll("{{URL}}", SITE + meta.path)
     .replaceAll("{{IMAGE}}", SITE + (meta.image || "/assets/img/sunburst-kaftan-set.webp"))
-    .replaceAll("{{LD}}", meta.ld ? `<script type="application/ld+json">${JSON.stringify(meta.ld)}</script>` : "");
+    .replaceAll("{{LD}}", () => (meta.ld ? `<script type="application/ld+json">${JSON.stringify(meta.ld)}</script>` : ""));
   let hd = header.replace(/\{\{nav:(\w+)\}\}/g, (_, k) => nav(k));
   return html
-    .replace("{{HEAD}}", h)
-    .replace("{{HEADER}}", hd)
-    .replace("{{FOOTER}}", footer)
-    .replace("{{LOOKS}}", looks)
+    .replace("{{HEAD}}", () => h)
+    .replace("{{HEADER}}", () => hd)
+    .replace("{{FOOTER}}", () => footer)
+    .replace("{{LOOKS}}", () => looks)
     .replaceAll("{{YEAR}}", new Date().getFullYear());
 }
 
