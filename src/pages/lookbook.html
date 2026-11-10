@@ -1,0 +1,14 @@
+<!--meta {"title":"Lookbook — Editorial Fashion Stories | Vue","desc":"The Vue lookbook: editorial looks across resort, tailoring, streetwear, knitwear and heritage. Tap any look to view it full-screen.","path":"/lookbook","nav":"lookbook"} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main" class="wrap">
+  <div class="phead"><span class="eyebrow">Lookbook · Season 01</span><h1 class="split" style="margin-top:.6rem">Seen on <em>you.</em></h1><p>Colour, volume and attitude. Tap a look to see it big, then shop the piece.</p></div>
+  <div class="masonry" style="margin-top:2rem" id="mason">{{LOOKS}}</div>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Look viewer"><button class="icon-btn" data-x aria-label="Close">✕</button><button class="icon-btn nxt p" aria-label="Previous">←</button><img alt=""><button class="icon-btn nxt n" aria-label="Next">→</button></div>
+{{FOOTER}}
+</body>
+</html>

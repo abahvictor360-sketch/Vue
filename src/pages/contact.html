@@ -1,0 +1,31 @@
+<!--meta {"title":"Contact Vue — Support, Styling Help & Collaborations","desc":"Questions about an order, sizing or a collaboration? Contact the Vue team — we reply within one business day.","path":"/contact","nav":"contact"} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main" class="wrap">
+  <div class="phead"><span class="eyebrow">Contact</span><h1 class="split" style="margin-top:.6rem">Let’s <em>talk.</em></h1><p>Order help, sizing advice, press or collaborations — drop us a line.</p></div>
+  <div class="two sec--tight">
+    <div class="cinfo">
+      <div class="box reveal"><i>✉</i><div><b>Email</b><span>hello@vue.example</span></div></div>
+      <div class="box reveal" style="--d:.08s"><i>☎</i><div><b>Phone / WhatsApp</b><span>+000 000 000 0000</span></div></div>
+      <div class="box reveal" style="--d:.16s"><i>⌚</i><div><b>Hours</b><span>Mon–Sat · 9:00–18:00</span></div></div>
+      <div style="margin-top:1rem"><h3 style="margin-bottom:1rem">FAQ</h3>
+        <details class="faq"><summary>How long does delivery take?</summary><p>Orders ship in 1–2 business days. Delivery usually takes 3–7 days depending on your location.</p></details>
+        <details class="faq"><summary>Can I return or exchange?</summary><p>Yes — unworn pieces can be returned within 14 days for a refund or exchange.</p></details>
+        <details class="faq"><summary>How do the sizes fit?</summary><p>Most Vue silhouettes are intentionally relaxed. If you’re between sizes, size down for a closer fit.</p></details>
+      </div>
+    </div>
+    <form class="form reveal" id="contactForm">
+      <div class="two-c"><label>Name<input name="name" required autocomplete="name" placeholder="Your name"></label><label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@email.com"></label></div>
+      <label>Topic<select name="topic"><option>Order support</option><option>Sizing & styling</option><option>Press & collaborations</option><option>Something else</option></select></label>
+      <label>Message<textarea name="message" required placeholder="How can we help?"></textarea></label>
+      <button class="btn btn--blue" type="submit">Send message <span class="arr">→</span></button>
+      <p class="ok small" id="contactOk" role="status"></p>
+    </form>
+  </div>
+</main>
+{{FOOTER}}
+</body>
+</html>

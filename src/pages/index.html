@@ -1,0 +1,123 @@
+<!--meta {"title":"Vue — Wear Your Own Story | Modern Fashion Store","desc":"Vue is a modern fashion storefront for everyday style: resort wear, tailoring, knitwear and streetwear. Discover pieces that fit your story.","path":"/","nav":"home","ld":"org"} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main">
+
+<section class="hero wrap">
+  <div class="hero__card" id="hero">
+    <span class="hero__blob hero__blob--a"></span><span class="hero__blob hero__blob--b"></span><span class="hero__ring"></span>
+
+    <div class="hero__steps glass" id="heroSteps" role="tablist" aria-label="Hero slides">
+      <button class="is-on" aria-label="Slide 1">1</button><button aria-label="Slide 2">2</button><button aria-label="Slide 3">3</button>
+    </div>
+
+    <div class="hero__copy">
+      <span class="hero__tag" id="heroTag">New season — Resort</span>
+      <h1 class="split">Wear Your <em>Own</em> Story.</h1>
+      <p class="hero__sub">Explore timeless pieces made for comfort, confidence and everyday life. Shapes that move with you — colours that speak first.</p>
+      <div class="hero__cta">
+        <a class="btn btn--blue" href="/shop">Explore Collection <span class="arr">→</span></a>
+        <a class="btn btn--ghost glass" href="/lookbook">View Lookbook</a>
+      </div>
+    </div>
+
+    <div class="hero__fig" id="heroFig">
+      <img src="/assets/img/sunburst-kaftan-set-cutout.webp" alt="Model leaping in an orange kaftan set" fetchpriority="high">
+      <img src="/assets/img/ivory-pleated-jumpsuit-cutout.webp" alt="Model in an ivory pleated jumpsuit">
+      <img src="/assets/img/sand-resort-set-cutout.webp" alt="Model seated in a sand resort set with chunky sneakers">
+    </div>
+
+    <div class="hero__chip hero__chip--a glass"><span class="stars" style="margin:0">★★★★★</span><div><b>4.8 / 5</b>from 12K+ reviews</div></div>
+    <div class="hero__chip hero__chip--b glass"><div><b>Free shipping</b>on orders over $150</div></div>
+
+    <a class="hero__more glass" href="/shop">
+      <span>Discover More</span><i class="arrow-c">↗</i>
+      <div class="mini"><div class="avs"><img src="/assets/img/cobalt-stripe-cardigan.webp" alt=""><img src="/assets/img/aso-oke-gele-set.webp" alt=""><img src="/assets/img/palm-print-blazer.webp" alt=""></div><div><strong>New Season</strong>Explore the latest pieces for your everyday expression.</div></div>
+    </a>
+  </div>
+
+  <div class="follow reveal">
+    <b>Follow <span>us</span> ✦</b>
+    <div class="marquee" aria-hidden="true"><div class="marquee__track">
+      <span>Resort Wear</span><span>Tailoring</span><span>Streetwear</span><span>Knitwear</span><span>Heritage</span><span>Everyday Essentials</span>
+      <span>Resort Wear</span><span>Tailoring</span><span>Streetwear</span><span>Knitwear</span><span>Heritage</span><span>Everyday Essentials</span>
+    </div></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="sec__head reveal">
+    <div><h2>Popular Collections</h2><p>Discover everyday styles from Vue — three edits, one point of view.</p></div>
+    <div class="arrows"><button aria-label="Previous" data-scroll="-1">←</button><button class="dark" aria-label="Next" data-scroll="1">→</button></div>
+  </div>
+  <div class="grid3" id="cols">
+    <a class="ccard reveal" href="/shop?collection=resort"><img loading="lazy" src="/assets/img/butter-poplin-set.webp" alt="Resort Wear collection" style="object-position:50% 12%"><span class="ccard__tag glass">Edit 01</span>
+      <div class="ccard__meta glass"><div><strong>Resort Wear</strong><span>Vue · Fashion</span></div><span class="pill">★ 4.7</span></div></a>
+    <a class="ccard reveal" style="--d:.1s" href="/shop?collection=everyday"><img loading="lazy" src="/assets/img/field-chore-jacket.webp" alt="Everyday Essentials collection"><span class="ccard__tag glass">Edit 02</span>
+      <div class="ccard__meta glass"><div><strong>Everyday Essentials</strong><span>Vue · Fashion</span></div><span class="pill">★ 4.8</span></div></a>
+    <a class="ccard reveal" style="--d:.2s" href="/shop?collection=summer"><img loading="lazy" src="/assets/img/palm-print-blazer.webp" alt="Summer Collection" style="object-position:50% 20%"><span class="ccard__tag glass">Edit 03</span>
+      <div class="ccard__meta glass"><div><strong>Summer Collection</strong><span>Vue · Fashion</span></div><span class="pill">★ 4.7</span></div></a>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="center reveal"><h2 style="font-size:clamp(2rem,4.4vw,3.4rem)" class="split">Your Style, Made Simple!</h2><p class="muted" style="margin-top:.8rem;max-width:52ch">Discover pieces that fit your everyday style, express your personality and make you feel confident.</p></div>
+  <div class="simple">
+    <div class="scard reveal"><div class="scard__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4a4 4 0 01-8 0z"/></svg></div><h3>Find Your Style</h3><p>Browse by mood — resort, tailoring, knit or street — and find the silhouette that feels like you.</p><a class="link" href="/shop">Browse styles →</a></div>
+    <div class="scard scard--blue reveal" style="--d:.1s"><div class="scard__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.600 6.600 19.500l1.200-6L3.300 9.300l6.100-.7z"/></svg></div><h3>Shop The Collection</h3><p>Discover timeless pieces crafted for your lifestyle.</p><a class="btn btn--ghost" href="/shop">Explore now →</a><img loading="lazy" src="/assets/img/palm-print-blazer-cutout.webp" alt=""></div>
+    <div class="scard reveal" style="--d:.2s"><div class="scard__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></div><h3>Easy Shopping</h3><p>A bag that remembers you, quick add from any page and checkout in a few taps.</p><a class="link" href="/login#signup">Create an account →</a></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="about">
+    <div class="about__media reveal reveal--left"><img loading="lazy" src="/assets/img/charcoal-crew-denim-cutout.webp" alt="Model in charcoal crewneck and baggy denim"><div class="glass"><b>Made to be lived in.</b><br>Honest fabrics, generous cuts.</div></div>
+    <div class="reveal reveal--right">
+      <span class="eyebrow">About Vue</span>
+      <h2>Fashion is more than just clothing.</h2>
+      <p>It’s a way to express your individuality, feel confident and embrace your everyday story. We create timeless, versatile pieces with quality and comfort at the heart of every stitch — designed to be styled your way.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Years of experience</span></div>
+        <div class="stat"><b data-count="12" data-suffix="K">0</b><span>Happy clients</span></div>
+        <div class="stat"><b data-count="4.8">0</b><span>Overall rating</span></div>
+      </div>
+      <a class="btn btn--dark" style="margin-top:2rem" href="/about">Our story <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--tight wrap">
+  <div class="center reveal"><h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem)">Style Made For Every You</h2><p class="muted" style="margin-top:.7rem">Timeless pieces that blend comfort, quality and modern style — made for your everyday moments.</p></div>
+  <div class="feats" style="margin-top:2rem">
+    <div class="feat reveal"><div class="scard__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div><h3>Wide Range of Collections</h3><p>From essential layers to statement tailoring, find your fit across resort, street, knit and heritage.</p></div>
+    <div class="feat reveal" style="--d:.1s"><div class="scard__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.500 8-8 9-4.500-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Premium Quality Materials</h3><p>Carefully selected linens, cottons and wools, finished to last beyond a single season.</p></div>
+    <div class="feat reveal" style="--d:.2s"><div class="scard__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Affordable Luxury</h3><p>Trendy, high-quality fashion at prices that fit your lifestyle — never at the cost of craft.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="center reveal"><h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem)">Loved By Our Customers</h2><p class="muted" style="margin-top:.7rem">Real stories from people who made Vue part of their everyday style.</p></div>
+  <div class="tgrid" style="margin-top:2.2rem">
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>“The quality is amazing! I’ve ordered several pieces and each one fits perfectly. The fabrics feel premium and the colours are even better in person.”</p><div class="who"><img loading="lazy" src="/assets/img/mocha-knit-cardigan.webp" alt=""><div><b>Ayesha K.</b><span>Verified customer</span></div></div></div>
+    <div class="tcard is-feat reveal" style="--d:.1s"><div class="stars">★★★★★</div><p>“Vue has become my go-to for effortless style. Comfortable, modern and super easy to mix and match. The delivery was fast too.”</p><div class="who"><img loading="lazy" src="/assets/img/aso-oke-gele-set.webp" alt=""><div><b>Sara A.</b><span>Verified customer</span></div></div></div>
+    <div class="tcard reveal" style="--d:.2s"><div class="stars">★★★★★</div><p>“Beautiful collections and excellent customer service. The clothes are trendy, comfortable and true to size. I’ve shopped here multiple times and always been happy.”</p><div class="who"><img loading="lazy" src="/assets/img/cobalt-stripe-cardigan.webp" alt=""><div><b>Hira M.</b><span>Verified customer</span></div></div></div>
+  </div>
+</section>
+
+<section class="sec sec--tight wrap">
+  <div class="cta reveal reveal--zoom">
+    <div><h2>Elevate Your Everyday Style!</h2><p>Join the Vue list for early access to new drops, styling notes and members-only offers.</p><a class="btn" href="/login#signup">Create free account <span class="arr">→</span></a></div>
+    <div class="cta__imgs"><img loading="lazy" src="/assets/img/ivory-pleated-jumpsuit-cutout.webp" alt=""><img loading="lazy" src="/assets/img/sage-wide-leg-suit-cutout.webp" alt=""></div>
+  </div>
+</section>
+
+</main>
+{{FOOTER}}
+<script>
+document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>{const c=document.getElementById('cols');c.scrollBy({left:c.firstElementChild.offsetWidth*+b.dataset.scroll,behavior:'smooth'})}));
+</script>
+</body>
+</html>

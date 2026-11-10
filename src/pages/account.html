@@ -1,0 +1,16 @@
+<!--meta {"title":"My Account | Vue","desc":"Your Vue account.","path":"/account","nav":"","noindex":true} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main" class="wrap">
+  <div class="phead"><span class="eyebrow">My account</span><h1 style="margin-top:.6rem">Hello, <em id="acName">…</em></h1></div>
+  <div class="acct" id="account">
+    <div class="acard"><div class="avatar" id="acAvatar">V</div><b id="acName2" hidden></b><p class="muted small" id="acEmail"></p><div style="display:grid;gap:.6rem;margin-top:1.4rem"><a class="btn btn--dark btn--sm" href="/shop">Continue shopping</a><button class="btn btn--ghost btn--sm" id="logout">Log out</button></div></div>
+    <div class="acard"><h3 style="margin-bottom:1.2rem">Saved looks</h3><div class="pgrid" id="acWish" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))"></div></div>
+  </div>
+</main>
+{{FOOTER}}
+</body>
+</html>

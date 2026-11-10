@@ -1,0 +1,11 @@
+{
+  "name": "vue-fashion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vue — Wear Your Own Story. A motion-first fashion storefront.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && npx --yes serve dist -l 3000"
+  }
+}

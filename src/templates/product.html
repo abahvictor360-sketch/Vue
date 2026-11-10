@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main" class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/shop">Collection</a> / <a href="/shop?cat={{CATEGORY}}">{{CATEGORY}}</a> / {{NAME}}</nav>
+  <div class="pdp" id="pdp" data-id="{{ID}}">
+    <div class="pdp__media reveal reveal--zoom"><img src="/assets/img/{{ID}}.webp" alt="{{NAME}}" fetchpriority="high"><button class="heart glass" id="pdpHeart" data-wish="{{ID}}" aria-label="Save to wishlist"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.2C1.1 8.4 3 5 6.4 5c2 0 3.6 1.1 4.6 2.6h2C14 6.1 15.600 5 17.600 5 21 5 22.900 8.400 21.500 11.800 19.500 16.400 12 21 12 21z"/></svg></button></div>
+    <div class="reveal reveal--right">
+      <span class="eyebrow">{{CATEGORY}}</span>
+      <h1>{{NAME}}</h1>
+      <div class="pdp__rate"><span class="stars">★★★★★</span> {{RATING}} · {{REVIEWS}} reviews</div>
+      <p class="lead">{{BLURB}}</p>
+      <div class="pdp__price">{{PRICE}} <span class="pill">Free shipping over $150</span></div>
+      <div class="opt"><h4>Colour</h4><div class="swatches">{{COLORS}}</div></div>
+      <div class="opt"><h4>Size</h4><div class="sizes" id="sizes"><button class="size" data-s="XS">XS</button><button class="size" data-s="S">S</button><button class="size is-on" data-s="M">M</button><button class="size" data-s="L">L</button><button class="size" data-s="XL">XL</button></div></div>
+      <div class="pdp__buy"><button class="btn btn--blue" id="addBtn">Add to bag</button><button class="btn btn--dark" id="buyBtn">Buy now</button></div>
+      <div class="perks"><div><i>🚚</i>Free shipping over $150 · 3–7 day delivery</div><div><i>↩</i>14-day returns on unworn pieces</div><div><i>✦</i>Relaxed fit — size down for a closer cut</div></div>
+    </div>
+  </div>
+  <section class="sec"><div class="sec__head"><h2>You may also like</h2></div><div class="pgrid" id="related">{{RELATED}}</div></section>
+</main>
+{{FOOTER}}
+</body>
+</html>

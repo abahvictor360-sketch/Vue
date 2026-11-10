@@ -1,0 +1,53 @@
+<!--meta {"title":"Log in or Create an Account | Vue","desc":"Log in to Vue or create a free account to save looks, speed up checkout and get early access to drops.","path":"/login","nav":"","noindex":true} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="auth">
+  <aside class="auth__art" aria-hidden="false">
+    <span class="blob" style="width:360px;height:360px;background:#7db4ff;left:-80px;top:-80px"></span>
+    <span class="blob" style="width:300px;height:300px;background:#ffb27a;right:-60px;bottom:10%;animation-delay:-4s"></span>
+    <a class="logo" href="/" style="position:relative;z-index:3"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="22" height="22"><path d="M12 16l20 32 20-32" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vue</a>
+    <img class="auth__fig" src="/assets/img/sunburst-kaftan-set-cutout.webp" alt="">
+    <div><h2>Wear Your<br>Own Story.</h2><p>Save your favourite looks, speed through checkout and be first to see new drops.</p></div>
+    <div class="glass glass--dark"><b>Members get early access</b><br>New drops land 24h before everyone else.</div>
+  </aside>
+
+  <section class="auth__main" id="authForms">
+    <div class="card-auth">
+      <a class="muted small" href="/">← Back to store</a>
+      <h1 style="margin-top:1.4rem">Welcome to Vue</h1>
+      <p class="muted">Log in or create an account to continue.</p>
+      <div class="tabs" data-tab="login" role="tablist"><button type="button" data-t="login" role="tab" aria-selected="true">Log in</button><button type="button" data-t="signup" role="tab" aria-selected="false">Sign up</button></div>
+
+      <div class="panel" id="panelLogin">
+        <form class="form" id="formLogin" style="padding:0;background:none" novalidate="false">
+          <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@email.com"></label>
+          <label>Password<div class="pw"><input type="password" name="password" required autocomplete="current-password" placeholder="Your password"><button type="button" data-pw>Show</button></div></label>
+          <p class="err" id="errLogin" role="alert"></p>
+          <button class="btn btn--blue btn--block" type="submit">Log in <span class="arr">→</span></button>
+        </form>
+        <p class="small muted center" style="margin-top:1rem">New here? <a href="#signup" data-switch="signup" style="color:var(--blue);font-weight:700">Create an account</a></p>
+      </div>
+
+      <div class="panel" id="panelSignup" hidden>
+        <form class="form" id="formSignup" style="padding:0;background:none">
+          <label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@email.com"></label>
+          <div class="two-c"><label>Password<div class="pw"><input type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="8+ characters"><button type="button" data-pw>Show</button></div></label>
+          <label>Confirm<input type="password" name="confirm" required autocomplete="new-password" placeholder="Repeat password"></label></div>
+          <p class="err" id="errSignup" role="alert"></p>
+          <button class="btn btn--blue btn--block" type="submit">Create account <span class="arr">→</span></button>
+        </form>
+        <p class="small muted center" style="margin-top:1rem">Already a member? <a href="#login" data-switch="login" style="color:var(--blue);font-weight:700">Log in</a></p>
+      </div>
+
+      <div class="divider">or continue with</div>
+      <div class="sso"><button class="btn" type="button" data-sso="Google">Google</button><button class="btn" type="button" data-sso="Apple">Apple</button></div>
+      <p class="demo-note">Demo accounts are stored only in this browser. Never reuse a real password here.</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>

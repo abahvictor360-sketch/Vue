@@ -1,0 +1,18 @@
+<!--meta {"title":"Shop the Collection — Resort, Tailoring, Knitwear & Streetwear | Vue","desc":"Browse the full Vue collection: resort wear, tailoring, knitwear, streetwear and heritage pieces. Filter, search and add to bag.","path":"/shop","nav":"shop"} -->
+<!doctype html>
+<html lang="en">
+<head>{{HEAD}}</head>
+<body>
+{{HEADER}}
+<main id="main" class="wrap">
+  <div class="phead"><span class="eyebrow">The Collection</span><h1 class="split" style="margin-top:.6rem">Pieces for <em>every</em> story.</h1><p>Wide silhouettes, honest fabrics, loud colour and quiet luxury. Tap the heart to save a look.</p></div>
+  <div class="toolbar">
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <div class="tools"><input class="field" id="q" type="search" placeholder="Search pieces…" aria-label="Search"><select class="select" id="sort" aria-label="Sort"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select></div>
+  </div>
+  <p class="muted small" id="count" style="margin:-.8rem 0 1rem"></p>
+  <div class="pgrid" id="pgrid" aria-live="polite"></div>
+</main>
+{{FOOTER}}
+</body>
+</html>
