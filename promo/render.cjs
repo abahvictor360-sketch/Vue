@@ -1,15 +1,17 @@
-// Renders promo.html to frames, then ffmpeg encodes MP4. Usage: node render.cjs <outfile.mp4> [siteUrl]
+// Renders a promo page to frames, then ffmpeg encodes MP4.
+// Usage: node render.cjs <out.mp4> [siteUrl] [page=promo.html] [width=1080] [height=1920] [seconds=18]
 const { chromium } = require("playwright");
 const { execSync } = require("child_process");
 const fs = require("fs"), path = require("path");
 const out = path.resolve(process.argv[2] || "vue-promo-mobile.mp4");
 const url = process.argv[3] || "";
-const FPS = 30, DUR = 18, dir = path.join(__dirname, "frames");
+const page = process.argv[4] || "promo.html", W = +(process.argv[5] || 1080), H = +(process.argv[6] || 1920);
+const FPS = 30, DUR = +(process.argv[7] || 18), dir = path.join(__dirname, "frames");
 fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
 (async () => {
   const b = await chromium.launch({ args: ["--allow-file-access-from-files"] });
-  const pg = await (await b.newContext({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 })).newPage();
-  await pg.goto("file://" + path.join(__dirname, "promo.html") + (url ? "?url=" + encodeURIComponent(url) : ""));
+  const pg = await (await b.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 })).newPage();
+  await pg.goto("file://" + path.join(__dirname, page) + (url ? "?url=" + encodeURIComponent(url) : ""));
   await pg.evaluate(() => window.ready); await pg.waitForTimeout(500);
   const N = FPS * DUR;
   for (let i = 0; i < N; i++) {

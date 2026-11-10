@@ -16,7 +16,10 @@ npm run dev        # build + serve on :3000
 - Page templates: `src/pages/*.html`, shared header/footer/head in `src/partials/`.
 - Font: self-hosted variable sans registered as **"Vue"** (`src/assets/fonts`).
 - Images were processed with `scripts/process_images.py` (UI-overlay inpainting, background-removed cutouts, WebP).
-- Promo video: `node promo/render.cjs public/vue-promo-mobile.mp4 <site-url>` (needs Playwright + ffmpeg).
+- Promo videos (needs Playwright + ffmpeg):
+  - mobile: `node promo/render.cjs public/vue-promo-mobile.mp4 <site-url>`
+  - desktop: `node promo/render.cjs public/vue-promo-desktop.mp4 <site-url> promo-desktop.html 1920 1080 20.5`
+  - timelines are plain HTML/CSS in `promo/`; the desktop one uses page captures in `promo/shots/`.
 
 ## Deploy
 Vercel project `vue-fashion` is linked to this repo (`vercel.json` sets build + clean URLs + caching). Set `SITE_URL` env var if you move to a custom domain so canonical/OG/sitemap URLs update.

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Vue — desktop promo (1920×1080)</title>
+<style>
+@font-face{font-family:"Vue";src:url("../src/assets/fonts/vue-variable.woff2") format("woff2");font-weight:100 1000}
+:root{--ease:cubic-bezier(.22,1,.36,1);--blue:#0b63f6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0b63f6;font-family:"Vue",system-ui,sans-serif;color:#0a0b10}
+.stage{position:relative;width:1920px;height:1080px;overflow:hidden}
+.scene{position:absolute;inset:0;opacity:0;animation:vis var(--len) linear var(--s) both;overflow:hidden}
+@keyframes vis{0%{opacity:0}5%{opacity:1}95%{opacity:1}100%{opacity:0}}
+.a{animation-delay:calc(var(--s) + var(--o,0s));animation-duration:var(--d,1s);animation-timing-function:var(--ease);animation-fill-mode:both}
+@keyframes up{from{opacity:0;transform:translateY(80px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes wordin{from{transform:translateY(115%)}to{transform:none}}
+@keyframes slideL{from{opacity:0;transform:translateX(-140px)}to{opacity:1;transform:none}}
+@keyframes slideR{from{opacity:0;transform:translateX(140px)}to{opacity:1;transform:none}}
+@keyframes leap{from{opacity:0;transform:translate(300px,420px) rotate(12deg) scale(.7)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(160px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes scrolly{from{transform:translateY(0)}to{transform:translateY(var(--end))}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,-40px)}}
+.float{animation:float 5s ease-in-out infinite}
+.glass{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.32));backdrop-filter:blur(26px) saturate(180%);border:2px solid rgba(255,255,255,.65);box-shadow:inset 0 2px 0 rgba(255,255,255,.9),0 26px 60px -20px rgba(10,30,90,.35);border-radius:44px}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em}.w>span{display:inline-block}
+h1,h2{font-weight:800;letter-spacing:-.055em;line-height:.95}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);animation:drift 9s ease-in-out infinite}
+.ring{position:absolute;border-radius:50%;border:3px solid rgba(255,255,255,.55)}.ring.dash{border-style:dashed;animation:spin 30s linear infinite}
+.logo{display:flex;align-items:center;gap:20px;font-weight:800;font-size:60px;letter-spacing:-.05em}
+.logo i{width:84px;height:84px;border-radius:26px;background:#fff;color:var(--blue);display:grid;place-items:center}
+.cutout{position:absolute;filter:drop-shadow(0 50px 50px rgba(10,30,90,.45))}
+.tag{font-size:26px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:20px}
+.tag::before{content:"";width:60px;height:4px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:28px 56px;border-radius:999px;font-weight:700;font-size:36px}
+.browser{position:absolute;left:180px;top:250px;width:1560px;height:800px;border-radius:36px 36px 0 0;background:#fff;overflow:hidden;box-shadow:0 60px 120px -30px rgba(10,30,90,.55)}
+.browser .bar{height:60px;background:#eef1f7;display:flex;align-items:center;gap:12px;padding:0 26px;border-bottom:1px solid #dfe4ee;position:relative;z-index:3}
+.browser .bar i{width:16px;height:16px;border-radius:50%;background:#ff5f57}.browser .bar i:nth-child(2){background:#febc2e}.browser .bar i:nth-child(3){background:#28c840}
+.browser .bar span{margin:0 auto;background:#fff;border-radius:999px;padding:8px 40px;font-size:22px;color:#6b7280;transform:translateX(-30px)}
+.browser .view{position:absolute;left:0;right:0;top:60px;bottom:0;overflow:hidden}
+.browser .view img{width:1560px;display:block}
+.chipx{position:absolute;padding:26px 40px;font-size:32px;font-weight:600;display:flex;gap:22px;align-items:center}
+.chipx b{font-size:46px;letter-spacing:-.04em;display:block;line-height:1}
+</style></head>
+<body><div class="stage">
+
+<!-- A · hook (0–3.8s) -->
+<section class="scene" style="--s:0s;--len:3.8s;background:linear-gradient(120deg,#bfe0ff,#2f7bff 65%,#0a4fe0)">
+  <span class="blob" style="width:800px;height:800px;background:#fff;left:-250px;bottom:-350px;opacity:.7"></span>
+  <span class="blob" style="width:650px;height:650px;background:#7db4ff;right:-100px;top:-300px;animation-delay:-4s"></span>
+  <div class="ring" style="width:900px;height:900px;right:60px;top:90px"></div><div class="ring dash" style="width:700px;height:700px;right:160px;top:190px"></div>
+  <div class="a" style="--o:.1s;--d:.8s;animation-name:pop;position:absolute;left:90px;top:70px"><div class="logo"><i><svg viewBox="0 0 64 64" width="52" height="52"><path d="M12 16l20 32 20-32" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Vue</div></div>
+  <div style="position:absolute;left:90px;top:360px;width:1100px">
+    <div class="tag a" style="--o:.35s;animation-name:up;margin-bottom:36px">New season</div>
+    <h1 style="font-size:168px;white-space:nowrap">
+      <span class="w"><span class="a" style="--o:.5s;--d:.9s;animation-name:wordin">Wear</span></span>
+      <span class="w"><span class="a" style="--o:.6s;--d:.9s;animation-name:wordin">Your</span></span><br>
+      <span class="w"><span class="a" style="--o:.75s;--d:.9s;animation-name:wordin;color:#fff">Own</span></span>
+      <span class="w"><span class="a" style="--o:.9s;--d:.9s;animation-name:wordin">Story.</span></span>
+    </h1>
+  </div>
+  <img class="cutout a" style="--o:1.1s;--d:1.3s;animation-name:leap;height:1120px;right:-130px;top:-30px" src="../src/assets/img/sunburst-kaftan-set-cutout.webp" alt="">
+</section>
+
+<!-- B · real site: home scroll (3.8–8.6s) -->
+<section class="scene" style="--s:3.8s;--len:6s;background:linear-gradient(120deg,#eaf2ff,#cfe0ff)">
+  <span class="blob" style="width:700px;height:700px;background:#9cc4ff;right:-200px;top:-250px"></span>
+  <div style="position:absolute;left:180px;top:70px">
+    <div class="tag a" style="--o:.1s;animation-name:up;color:var(--blue);margin-bottom:18px">The storefront</div>
+    <h2 class="a" style="--o:.2s;animation-name:up;font-size:96px">A full shop. <span style="color:var(--blue)">Built to feel alive.</span></h2>
+  </div>
+  <div class="browser a" style="--o:.4s;--d:1.1s;animation-name:rise"><div class="bar"><i></i><i></i><i></i><span>vue-fashion.vercel.app</span></div>
+    <div class="view"><img class="a" style="--o:1.4s;--d:4.2s;animation-name:scrolly;animation-timing-function:cubic-bezier(.4,0,.6,1);--end:-3300px" src="shots/home.jpg" alt=""></div></div>
+  <div class="glass chipx a" style="--o:1.2s;animation-name:slideR;right:60px;top:360px"><b>Liquid glass</b></div>
+  <div class="glass chipx a" style="--o:1.9s;animation-name:slideR;right:60px;top:520px"><b>Smooth motion</b></div>
+</section>
+
+<!-- C · shop (8.6–12.4s) -->
+<section class="scene" style="--s:9.8s;--len:4s;background:linear-gradient(120deg,#fde7c9,#f4b583)">
+  <span class="blob" style="width:700px;height:700px;background:#fff6e6;left:-200px;top:-250px;opacity:.8"></span>
+  <div style="position:absolute;left:180px;top:70px">
+    <div class="tag a" style="--o:.1s;animation-name:up;color:#7a3a10;margin-bottom:18px">The collection</div>
+    <h2 class="a" style="--o:.2s;animation-name:up;font-size:96px">17 pieces. <span style="color:#fff">Your story.</span></h2>
+  </div>
+  <div class="browser a" style="--o:.4s;--d:1.1s;animation-name:rise"><div class="bar"><i></i><i></i><i></i><span>vue-fashion.vercel.app/shop</span></div>
+    <div class="view"><img class="a" style="--o:1.3s;--d:2.4s;animation-name:scrolly;animation-timing-function:cubic-bezier(.4,0,.6,1);--end:-1250px" src="shots/shop.jpg" alt=""></div></div>
+  <div class="glass chipx a" style="--o:1.0s;animation-name:slideR;right:60px;top:380px"><b>Filter · Search · Sort</b></div>
+  <div class="glass chipx a" style="--o:1.6s;animation-name:slideR;right:60px;top:540px"><b>♡ Wishlist</b></div>
+</section>
+
+<!-- D · benefits (12.4–15.6s) -->
+<section class="scene" style="--s:13.8s;--len:3.2s;background:linear-gradient(120deg,#d9f0e1,#5fb48f)">
+  <span class="blob" style="width:800px;height:800px;background:#f2fff7;right:-250px;bottom:-250px;opacity:.8"></span>
+  <h2 class="a" style="--o:.1s;animation-name:up;position:absolute;left:100px;top:120px;font-size:190px">Made<br>for <span style="color:#fff">you.</span></h2>
+  <img class="cutout a" style="--o:.3s;--d:1.1s;animation-name:slideR;height:1040px;right:120px;bottom:10px" src="../src/assets/img/sand-resort-set-cutout.webp" alt="">
+  <div class="glass chipx a" style="--o:.5s;animation-name:slideL;left:100px;top:560px"><span style="font-size:56px">🚚</span><div><b>Free shipping</b>on orders over $150</div></div>
+  <div class="glass chipx a" style="--o:.8s;animation-name:slideL;left:100px;top:725px"><span style="font-size:56px;color:#ffb400">★</span><div><b>4.8 / 5</b>from 12K+ happy clients</div></div>
+  <div class="glass chipx a" style="--o:1.1s;animation-name:slideL;left:100px;top:890px"><span style="font-size:56px">✦</span><div><b>New drops</b>every season</div></div>
+</section>
+
+<!-- E · CTA (15.6–19s) -->
+<section class="scene" style="--s:17s;--len:3.4s;background:linear-gradient(120deg,#2a7bff,#0a3fb8);color:#fff">
+  <span class="blob" style="width:800px;height:800px;background:#7db4ff;left:-250px;top:-300px;opacity:.7"></span>
+  <span class="blob" style="width:600px;height:600px;background:#ffb27a;right:-100px;bottom:-250px;opacity:.6;animation-delay:-4s"></span>
+  <div class="float" style="position:absolute;left:960px;top:70px"><img class="cutout a" style="--o:.2s;--d:1s;animation-name:up;position:static;height:960px;display:block" src="../src/assets/img/palm-print-blazer-cutout.webp" alt=""></div>
+  <div class="float" style="position:absolute;left:1190px;top:20px;animation-delay:-2s"><img class="cutout a" style="--o:.35s;--d:1s;animation-name:up;position:static;height:960px;display:block" src="../src/assets/img/sage-wide-leg-suit-cutout.webp" alt=""></div>
+  <div class="float" style="position:absolute;right:40px;top:150px;animation-delay:-1s"><img class="cutout a" style="--o:.5s;--d:1s;animation-name:up;position:static;height:860px;display:block" src="../src/assets/img/cobalt-stripe-cardigan-cutout.webp" alt=""></div>
+  <div style="position:absolute;left:100px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;width:900px">
+    <div class="a" style="--o:.6s;animation-name:pop;margin-bottom:44px;transform-origin:left"><div class="logo"><i><svg viewBox="0 0 64 64" width="52" height="52"><path d="M12 16l20 32 20-32" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Vue</div></div>
+    <h2 class="a" style="--o:.8s;animation-name:up;font-size:150px">Wear your<br>own story.</h2>
+    <div class="a" style="--o:1.2s;animation-name:up;margin-top:54px"><span class="btn" style="background:#fff;color:#0a0b10" id="urlpill">vue-fashion.vercel.app</span></div>
+  </div>
+</section>
+
+</div>
+<script>
+const q = new URLSearchParams(location.search); if (q.get("url")) document.getElementById("urlpill").textContent = q.get("url");
+window.seek = (t) => { document.getAnimations().forEach((a) => { a.pause(); a.currentTime = t * 1000; }); };
+window.ready = Promise.all([document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => {}))]);
+</script></body></html>

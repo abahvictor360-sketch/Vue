@@ -1,12 +1,14 @@
 # Vue — launch post (copy, paste, edit the [brackets])
 
 Live site: https://vue-fashion.vercel.app
-Mobile video (1080×1920, 18s, works for Reels / TikTok / Shorts / Status): `public/vue-promo-mobile.mp4`
-(also served at https://vue-fashion.vercel.app/vue-promo-mobile.mp4)
+Videos (silent — add trending audio on the platform):
+- **Mobile / vertical** 1080×1920, 18s → Reels, TikTok, Shorts, Status: `public/vue-promo-mobile.mp4`
+- **Desktop / landscape** 1920×1080, ~20s → LinkedIn, X, YouTube, your portfolio site: `public/vue-promo-desktop.mp4`
+- Both are also served at https://vue-fashion.vercel.app/vue-promo-mobile.mp4 and https://vue-fashion.vercel.app/vue-promo-desktop.mp4
 
 ---
 
-## LinkedIn / Facebook (client-hunting version)
+## LinkedIn / Facebook (client-hunting version) — attach the DESKTOP video
 
 I design and build **fashion & e-commerce websites** that look premium and load fast. 🖤
 
@@ -35,7 +37,7 @@ Need a website for your fashion brand? I'm open for projects 📩 [your handle /
 
 ---
 
-## X / Threads (short)
+## X / Threads (short) — attach the DESKTOP video
 
 Just shipped **Vue** — a fashion e-commerce site with liquid-glass UI, scroll motion and a full cart + login flow. Open for client projects 👇
 https://vue-fashion.vercel.app
